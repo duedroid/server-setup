@@ -5,7 +5,7 @@ services:
     image: redis:6-alpine
     restart: always
     container_name: redis
-    command: redis-server --appendonly yes --requirepass {PASSWORD}
+    command: redis-server --maxmemory {RAM_MB}mb --requirepass {PASSWORD}
     volumes:
       - redis-data:/data
     ports:
