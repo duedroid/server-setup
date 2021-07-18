@@ -7,6 +7,9 @@ services:
     container_name: redis
     command: redis-server --appendonly yes --requirepass {PASSWORD}
     volumes:
-      - ~/redis/data:/data
+      - redis-data:/data
     ports:
       - 6379:6379
+
+volumes:
+  redis-data:
