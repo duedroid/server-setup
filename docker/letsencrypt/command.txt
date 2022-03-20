@@ -2,4 +2,4 @@ docker run -it --rm -p 81:80 --name letsencrypt -v "/etc/letsencrypt:/etc/letsen
 
 docker run -it --rm -p 81:80 --name letsencrypt -v "/etc/letsencrypt:/etc/letsencrypt"  certbot/certbot certonly --standalone -d {HOST}
 
-docker exec  nginx nginx -s reload
+docker exec nginx nginx -s reload
