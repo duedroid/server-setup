@@ -1,2 +1,2 @@
 mongodump --uri="{uri}" -d {database}
-mongorestore -d {database} -u {user} -p {password} {path}
+mongorestore --uri="{uri}" {path}
